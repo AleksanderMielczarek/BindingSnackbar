@@ -1,8 +1,29 @@
+[![](https://jitpack.io/v/AleksanderMielczarek/BindingSnackbar.svg)](https://jitpack.io/#AleksanderMielczarek/BindingSnackbar)
+
 # BindingSnackbar
 
 Library simplifying usage of Snackbar with [Android Data Binding](http://developer.android.com/tools/data-binding/guide.html).
 
 ## Usage
+
+Add it in your root build.gradle at the end of repositories:
+
+```groovy
+allprojects {
+	repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+Add the dependency
+
+```groovy
+dependencies {
+    compile 'com.github.AleksanderMielczarek:BindingSnackbar:0.1.0'
+}
+```
 
 ## Example
 
