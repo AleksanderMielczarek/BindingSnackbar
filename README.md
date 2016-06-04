@@ -21,7 +21,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    compile 'com.github.AleksanderMielczarek:BindingSnackbar:0.1.0'
+    compile 'com.github.AleksanderMielczarek:BindingSnackbar:0.1.1'
 }
 ```
 
@@ -78,6 +78,12 @@ BindingSnackbar.builder("BindingSnackbar", Snackbar.LENGTH_SHORT)
         .build()
         .show(view);    
 ```
+
+## Changelog
+
+### 0.1.1 (2016-06-14)
+
+- add dismiss method
 
 ## License
 
