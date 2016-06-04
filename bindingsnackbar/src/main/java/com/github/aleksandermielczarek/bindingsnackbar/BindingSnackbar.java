@@ -21,6 +21,8 @@ public class BindingSnackbar {
     private final int duration;
     private final List<SnackbarSettingsSetter> snackbarSettingsSetters;
 
+    private Snackbar snackbar;
+
     private BindingSnackbar(Builder builder) {
         text = builder.text;
         resId = builder.resId;
@@ -36,16 +38,23 @@ public class BindingSnackbar {
         return new Builder(resId, duration);
     }
 
-    private Snackbar asSnackbar(View view) {
-        Snackbar snackbar = text == null ? Snackbar.make(view, resId, duration) : Snackbar.make(view, text, duration);
-        for (SnackbarSettingsSetter settingsSetter : snackbarSettingsSetters) {
-            settingsSetter.setSettings(snackbar);
+    private void asSnackbar(View view) {
+        if (snackbar == null) {
+            snackbar = text == null ? Snackbar.make(view, resId, duration) : Snackbar.make(view, text, duration);
+            for (SnackbarSettingsSetter settingsSetter : snackbarSettingsSetters) {
+                settingsSetter.setSettings(snackbar);
+            }
         }
-        return snackbar;
+    }
+
+    public void dismiss() {
+        if (snackbar != null) {
+            snackbar.dismiss();
+        }
     }
 
     public void show(@NonNull View view) {
-        Snackbar snackbar = asSnackbar(view);
+        asSnackbar(view);
         snackbar.show();
     }
 
