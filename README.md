@@ -81,7 +81,7 @@ BindingSnackbar.builder("BindingSnackbar", Snackbar.LENGTH_SHORT)
 
 ## Changelog
 
-### 0.1.1 (2016-06-14)
+### 0.1.1 (2016-06-04)
 
 - add dismiss method
 
