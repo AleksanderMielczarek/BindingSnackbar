@@ -21,7 +21,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    compile 'com.github.AleksanderMielczarek:BindingSnackbar:0.1.1'
+    compile 'com.github.AleksanderMielczarek:BindingSnackbar:0.1.2'
 }
 ```
 
@@ -80,6 +80,10 @@ BindingSnackbar.builder("BindingSnackbar", Snackbar.LENGTH_SHORT)
 ```
 
 ## Changelog
+
+### 0.1.2 (2016-09-14)
+
+- update SDK
 
 ### 0.1.1 (2016-06-04)
 
